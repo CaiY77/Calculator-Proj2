@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <title>Calculator</title>
+</head>
+
+<body onclick="count()">
+
+  <form name="Calc">
+    <div class="grid">
+      <input type="text" name="Input" class="input" id="display">
+
+      <div class="clear" onclick="Calc.Input.value = ''"></div>
+      <div class="mod style" onclick="Calc.Input.value += '%'"></div>
+      <div class="divide style" onclick="Calc.Input.value += '/'"></div>
+      <div class="mul style" onclick="Calc.Input.value += '*'"></div>
+      <div class="sub style" onclick="Calc.Input.value += '-'"></div>
+      <div class="sum style" onclick="Calc.Input.value += '+'"></div>
+      <div class="equal style" onclick="answer()"></div>
+      <div class="avg style" onclick="avg()"></div>
+      <div class="dec style" onclick="Calc.Input.value += '.'"></div>
+      <div class="O style" onclick="Calc.Input.value += '0'"></div>
+      <div class="one style" onclick="Calc.Input.value += '1'"></div>
+      <div class="two style" onclick="Calc.Input.value += '2'"></div>
+      <div class="three style" onclick="Calc.Input.value += '3'"></div>
+      <div class="four style" onclick="Calc.Input.value += '4'"></div>
+      <div class="five style" onclick="Calc.Input.value += '5'"></div>
+      <div class="six style" onclick="Calc.Input.value += '6'"></div>
+      <div class="seven style" onclick="Calc.Input.value += '7'"></div>
+      <div class="eight style" onclick="Calc.Input.value += '8'"></div>
+      <div class="nine style" onclick="Calc.Input.value += '9'"></div>
+      <div class="art"></div>
+
+
+    </div>
+  </form>
+
+  <div class="art2" id='gif'></div>
+  <div class="toggle style" onclick="toggle()">Toggle<br />Background</div>
+
+  <script type="text/javascript">
+    let str;
+    let counter = 0;
+
+    // average function that checks for errors too.
+    function avg() {
+      str = Calc.Input.value;
+      let newstr = str.split("+");
+
+      for (let i = 0; i < newstr.length; i++) {
+        if (isNaN(newstr[i])) {
+          Calc.Input.value = 'ERROR';
+        }
+      }
+      Calc.Input.value = eval(Calc.Input.value) / newstr.length;
+    } // end avg func
+
+    function toggle() {
+      if (document.getElementById('gif').style.display == 'block') {
+        document.getElementById('gif').style.display = 'none';
+      } else {
+        document.getElementById('gif').style.display = 'block';
+      }
+    }
+
+    function answer() {
+      Calc.Input.value = eval(Calc.Input.value);
+    }
+  </script>
+</body>
+
+</html>

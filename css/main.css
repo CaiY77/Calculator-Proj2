@@ -1,0 +1,274 @@
+body {
+  background: url(../images/back.jpg);
+  background-size: cover;
+  height: 750px;
+}
+
+div {
+  padding-top: 20px;
+  border: solid;
+}
+
+input[type="text"] {
+  font-size: 45pt;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.art {
+  border: none;
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  right: 428px;
+  top: 141px;
+  background: url(../images/draw.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.art2 {
+  display: block;
+  border: none;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: url(../images/backgif.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.toggle {
+  position: absolute;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  border-radius: 95% 2% 92% 2%/4% 95% 6% 95%;
+  padding-bottom: 25px;
+  top: 50px;
+  left: 50px;
+}
+
+/*--------------------Calculator stuff ------------------------------------------*/
+.grid {
+  font-size: 24pt;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  border-radius: 4% 95% 6% 95%/95% 2% 92% 2%;
+  position: absolute;
+  left: 500px;
+  top: 100px;
+  justify-content: center;
+  height: 600px;
+  width: 450px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: repeat(6, 90px);
+  grid-gap: 10px;
+  grid-template-areas:
+    "input input input input"
+    "clear mod divide mul"
+    "seven eight nine subtr"
+    "four five six sum"
+    "one two three equal"
+    "O dec avg equal"
+  ;
+}
+
+
+.style:hover {
+  box-shadow: 8px 8px grey;
+}
+
+.input {
+  grid-area: input;
+  font-size: auto;
+  border: solid;
+  border-radius: 95% 2% 92% 2%/4% 95% 6% 95%;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.clear {
+  grid-area: clear;
+  border: none;
+  background: url(../images/boom.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.clear:hover {
+  background: url(../images/explode.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.mod {
+  grid-area: mod;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  background: url(../images/mod.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.divide {
+  grid-area: divide;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  background: url(../images/divide.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mul {
+  grid-area: mul;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  background: url(../images/mul.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.seven {
+  grid-area: seven;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  background: url(../images/seven.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.eight {
+  grid-area: eight;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  background: url(../images/eight.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nine {
+  grid-area: nine;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  background: url(../images/nine.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sub {
+  grid-area: subtr;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  background: url(../images/sub.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.four {
+  grid-area: four;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  background: url(../images/four.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.five {
+  grid-area: five;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  background: url(../images/five.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.six {
+  grid-area: six;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  background: url(../images/six.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sum {
+  grid-area: sum;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  background: url(../images/sum.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.one {
+  grid-area: one;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  background: url(../images/one.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.two {
+  grid-area: two;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  background: url(../images/two.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.three {
+  grid-area: three;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  background: url(../images/three.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.equal {
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  grid-area: equal;
+  background: url(../images/equal.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.equal:hover {
+  background: url(../images/hmm.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.O {
+  grid-area: O;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  background: url(../images/zero.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dec {
+  grid-area: dec;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  background: url(../images/dec.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.avg {
+  grid-area: avg;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  background: url(../images/avg.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
